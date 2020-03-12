@@ -42,6 +42,7 @@ function app(projects) {
                       <h4>${projects[i].title}</h4>
                       <p>${projects[i].description}</p>
                       <a href="${projects[i].url}" target="_blank">learn more</a>
+                      </br></br>
                   </div>
               </div>`
               $portfolioDiv.append($card)
@@ -50,10 +51,11 @@ function app(projects) {
 
 // HAMBURGER NAV
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function navScroll() {
+function navBurger() {
   var x = document.getElementById("myTopNav");
   if (x.style.display === "block") {
-    x.style.display = "none";
+    x.style.display = "none"
+    console.log(x.style.display);
   } else {
     x.style.display = "block";
   }
@@ -61,24 +63,24 @@ function navScroll() {
 
 
 
-//  sticky nav 
-// When the user scrolls the page, execute navScroll
-window.onscroll = function() {navScroll()};
+// //  sticky nav 
+// // When the user scrolls the page, execute navScroll
+// window.onscroll = function() {navScroll()};
 
-// Get the topnav
-var topnav = document.getElementById("topnav");
+// // Get the topnav
+// var topnav = document.getElementById("topnav");
 
-// Get the offset position of the navbar
-var sticky = topnav.offsetTop;
+// // Get the offset position of the navbar
+// var sticky = topnav.offsetTop;
 
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function stickyNav() {
-  if (window.pageYOffset >= sticky) {
-    topnav.classList.add("sticky")
-  } else {
-    topnav.classList.remove("sticky");
-  }
-}
+// // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+// function stickyNav() {
+//   if (window.pageYOffset >= sticky) {
+//     topnav.classList.add("sticky")
+//   } else {
+//     topnav.classList.remove("sticky");
+//   }
+// }
 
 
 

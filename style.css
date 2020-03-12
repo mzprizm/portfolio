@@ -2,6 +2,11 @@ body {
   font-family: sans-serif;
   text-align: center;
   border: 2px solid limegreen;
+  display: grid;
+}
+
+#pageDiv {
+  justify-content: center;
 }
 
 header {
@@ -9,21 +14,26 @@ header {
   text-align: center;
 }
 
-
+.fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+   /* z-index: 1030;*/
+}
 
 /* FOR ICON */
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: rgba(0, 0, 0, .85);
+  background-color: rgba(0, 0, 0, .80);
   overflow: hidden;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
   float: center;
-  display: block;
+/*  display: block;*/
   color: #FFFFFF;
-  overflow: hidden;;
+  overflow: hidden;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -34,19 +44,30 @@ header {
 .topnav a:hover {
   background-color: #00FDFD;
   color: black;
+  font-weight: bold;
+  letter-spacing: 2px;
+ /* text-transform: uppercase;*/
 }
 
 /* Add an active class to highlight the current page */
-.topnav a.active {
+/*.topnav a.active {
   background-color: #00FDFD;
   color: black;
-}
+}*/
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
 }
 
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 
 /*
 nav {
@@ -57,41 +78,72 @@ nav {
 }
 */
 
-
-
-
 /*nav a {
   border: 2px solid blue;
 }*/
 
 p { 
-  text-align: left;
+  text-align: center;
+  padding: 10px;
 }
 
-h1 {
-  border: 2px solid pink;
+h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-h2 {
-  border: 2px solid magenta;
-  text-align: center;
+button {
+  font-family: sans-serif;
+  background-image: url(https://res.cloudinary.com/mzprizm/image/upload/v1583881183/prizmpool_unkkr2.jpg);
+  padding: 20px;
+  color: white;
+  border: 2px solid black;
+  font-size: 20px;
+  cursor: pointer;
+  hover {
+    background-color: #00FDFD;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 2px;
+ /* text-transform: uppercase;*/
 }
 
-h4 {
-  border: 2px solid orange;
-  text-align: center;
 }
+
+#topPic {
+  display:cover;
+  background-repeat:none;
+}
+
+.topImage {
+  margin: 0 auto;
+  max-width: 500px;
+  justify-content: center;
+}
+
+footer {
+  background-image: url(https://res.cloudinary.com/mzprizm/image/upload/v1583881183/prizmpool_unkkr2.jpg);
+  background-position: center;
+/*  background-repeat: no-repeat;*/
+}
+
 .card {
 	border: 2px solid purple;
+  justify-content: center;
 }
 
 .cardcontents {
   border: 2px solid yellow;
 }
 
+#portfolioSection {
+  max-width: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+}
 .portfolioImage {
-  border: 2px solid orange;
+  display: block;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .socialImageBar {
@@ -99,6 +151,21 @@ h4 {
 	max-width: 50px;
 }
 
+.coverImage {
+/*  display: block;*/
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.cardstyle > a{
+  margin-bottom: 20px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+.lightText {
+  font-weight: lighter;
+}
 /*aside {
 	display: flex;
 	flex-direction: column;
@@ -113,12 +180,12 @@ h4 {
 except for the first one ("Home"). - successful
 Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 500px) {
-   .topnav a:not(:first-child) {display: none;} 
-
-  .topnav a.icon {
-    float: center;
-    display: block;
-  }
+    .topnav a:not(:first-child) {display: none;} 
+    .topnav a.icon {
+      float: right;
+      display: block;
+      color: white;
+    }
 
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
 This class makes the topnav look good on small screens 
@@ -137,17 +204,28 @@ This class makes the topnav look good on small screens
 
 }
 
-
-
-
-
-
-@media screen and (max-width: 500px) {
- 
+/* RAINBOW TEXT BKG */
+.grad1 {
+    height: 200px;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */
 }
 
-
-
+/* RAINBOW TEXT  */
+.gradText {
+    background: pink;
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2em;
+}
+ 
 /*/*/
 /* STICKY NAV */
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
