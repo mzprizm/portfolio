@@ -2,7 +2,6 @@ html {
   scroll-behavior: smooth
 }  
 
-
 body {
   font-family: helvetica, sans-serif;
   text-align: center;
@@ -87,10 +86,6 @@ nav {
 }
 */
 
-/*nav a {
-  border: 2px solid blue;
-}*/
-
 p { 
   text-align: center;
   padding: 10px;
@@ -116,13 +111,14 @@ button {
   border: 2px solid black;
   font-size: 20px;
   cursor: pointer;
-  hover {
+ /* text-transform: uppercase;*/
+}
+
+ button hover {
     background-color: #00FDFD;
     color: black;
     font-weight: bold;
     letter-spacing: 2px;
- /* text-transform: uppercase;*/
-}
 
 }
 
