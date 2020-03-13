@@ -1,9 +1,14 @@
+html {
+  scroll-behavior: smooth
+}  
+
+
 body {
-  font-family: sans-serif;
+  font-family: helvetica, sans-serif;
   text-align: center;
-  border: 2px solid limegreen;
-  display: grid;
-}
+  margin:0 auto;
+/*  border: 2px solid limegreen;
+*/}
 
 #pageDiv {
   justify-content: center;
@@ -12,9 +17,11 @@ body {
 header {
   display: block;
   text-align: center;
+  margin:0 auto;
+  padding:0px;
 }
 
-.fixed-top {
+.fixed-Top {
     position: fixed;
     right: 0;
     left: 0;
@@ -24,9 +31,11 @@ header {
 /* FOR ICON */
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: rgba(0, 0, 0, .80);
+  background-color: rgba(0, 0, 0, 1);
+  padding: 10px;
   overflow: hidden;
 }
+
 
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -45,15 +54,15 @@ header {
   background-color: #00FDFD;
   color: black;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
  /* text-transform: uppercase;*/
 }
 
 /* Add an active class to highlight the current page */
-/*.topnav a.active {
+.topnav a.active {
   background-color: #00FDFD;
   color: black;
-}*/
+}
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
@@ -87,6 +96,14 @@ p {
   padding: 10px;
 }
 
+.helvetica {
+  font-family: helvetica, sans-serif;
+}
+
+.gray {
+  color: #676C70;
+}
+
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
@@ -112,27 +129,36 @@ button {
 #topPic {
   display:cover;
   background-repeat:none;
+  padding-top: 20px;
+}
+
+.letterspacing1 {
+  letter-spacing: 1px;
 }
 
 .topImage {
   margin: 0 auto;
   max-width: 500px;
-  justify-content: center;
-}
+/*  justify-content: center;
+*/}
 
 footer {
   background-image: url(https://res.cloudinary.com/mzprizm/image/upload/v1583881183/prizmpool_unkkr2.jpg);
   background-position: center;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 /*  background-repeat: no-repeat;*/
 }
 
 .card {
-	border: 2px solid purple;
+	border: 1px solid black;
   justify-content: center;
 }
 
-.cardcontents {
-  border: 2px solid yellow;
+i {
+  color: #000000;
+  max-width: 100px;
 }
 
 #portfolioSection {
@@ -141,8 +167,8 @@ footer {
   margin: 0 auto;
 }
 .portfolioImage {
-  display: block;
-  max-width: 500px;
+/*  display: block;
+*/  max-width: 450px;
   margin: 0 auto;
 }
 
@@ -224,6 +250,10 @@ This class makes the topnav look good on small screens
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 2em;
+}
+
+.current-menu-item {
+    color: magenta; /* Change white to whatever color you want your current menu item to be. You can add any styling you want here.*/
 }
  
 /*/*/
