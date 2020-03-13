@@ -4,6 +4,9 @@ if (typeof $ == 'undefined'){
 } else {console.log('I did it! I linked jQuery and this js file properly!')};
 
 
+
+
+
 /* API */
 let id = '16XjkVywfKrr5xFVnmsXPG6RyjTjue2VBurZf7dwCDUc'
 
@@ -37,29 +40,65 @@ function app(projects) {
   for (let i = 0; i < projects.length; i++) {
               let $card = 
               `<div class="card">
-                  <img class="portfolioImage" src="${projects[i].image}"></img>
                   <div class="cardstyle">
-                      <h4>${projects[i].title}</h4>
+                      <h3 class="helvetica, gray">${projects[i].title}</h3>
                       <p>${projects[i].description}</p>
                       <a href="${projects[i].url}" target="_blank">learn more</a>
                       </br></br>
                   </div>
-              </div>`
+                  <a href="${projects[i].url}"><img class="portfolioImage" src="${projects[i].image}"
+                  ></img></a>
+              </div>
+              </br>`
               $portfolioDiv.append($card)
           }
 }
 
+
+
+// SCROLL //
+console.log(window.top)
+
+$( document ).ready(function() { // Tells the function to wait to preform until everything on the page has loaded.
+    $(window).scroll(function() { // Says this function is preformed continuisly while scrolling.
+        var Scroll = $(window).scrollTop() + 1, // This variable finds the distance you have scrolled from the top.
+            SectionOneOffset = $('#home').offset().top, // This variable finds the distance between #section-one and the top. Replace #section-one with the ID of your section.
+            SectionTwoOffset = $('#portfolioSection').offset().top; // This variable finds the distance between #section-two and the top. Replace #section-two with the ID of your section. You can duplicate this for as many sections as you want.
+            console.log(SectionOneOffset)
+// // #mktgDesign #art #contact
+        if (Scroll >= SectionOneOffset) { // If you have scrolled past section one do this.
+            $(".menu-item-1").addClass("current-menu-item"); // Adds class of current-menu-item to the menu item with a class of menu-item-1
+        } else { // If you have not scrolled section one do this.
+            $(".menu-item-1").removeClass("current-menu-item"); // Removes class of current-menu-item to the menu item with a class of menu-item-1
+        }
+        if (Scroll >= SectionTwoOffset) { // If you have scrolled past section two do this.You can duplicate this for as many sections as you want.
+            $(".menu-item-2").addClass("current-menu-item"); // Adds class of current-menu-item to the menu item with a class of menu-item-2
+            $(".menu-item-1").removeClass("current-menu-item"); // Removes class of current-menu-item to the menu item with a class of menu-item-1
+        } else { // If you have not scrolled section two do this.
+            $(".menu-item-2").removeClass("current-menu-item"); // Removes class of current-menu-item to the menu item with a class of menu-item-2
+        }
+    });
+});
+
+
+
+
+
+
+
 // HAMBURGER NAV
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function navBurger() {
-  var x = document.getElementById("myTopNav");
-  if (x.style.display === "block") {
-    x.style.display = "none"
-    console.log(x.style.display);
-  } else {
-    x.style.display = "block";
-  }
-}
+// function navBurger() {
+//   var x = document.getElementById("myTopNav");
+//   if (x.style.display === "block") {
+//     x.style.display = "none"
+//     console.log(x.style.display);
+//   } else {
+//     x.style.display = "block";
+//   }
+// }
+
+
 
 
 
@@ -81,12 +120,3 @@ function navBurger() {
 //     topnav.classList.remove("sticky");
 //   }
 // }
-
-
-
-
-
-// i'd like my array of projects to looks just like this...
-// let projects = [
-//   {title: 'Startup Matchmaker', image: 'image url', description: "some desc", url: 'url to project'}
-// ]
