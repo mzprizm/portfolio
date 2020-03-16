@@ -2,7 +2,7 @@
 # Project Overview
 
 ## Project Schedule
-
+this is my portfolio website built with html, css and js. images are hosted in the cloud. enjoy!
 
 |  Day | Deliverable | Status
 |---|---| ---|
