@@ -2,7 +2,7 @@ console.log('app.js is connected')
 if (typeof $ == 'undefined'){
   console.log('oops! I still have to link my jQuery properly!');
 } else {console.log('I did it! I linked jQuery and this js file properly!')};
-console.log('hi')
+
 
 
 
@@ -59,13 +59,13 @@ function app(projects) {
 
 
 
-// SCROLL //
-console.log(window.top)
+// // SCROLL //
+console.log(window)
 
 $( document ).ready(function() { // Tells the function to wait to preform until everything on the page has loaded.
     $(window).scroll(function() { // Says this function is preformed continuisly while scrolling.
         var Scroll = $(window).scrollTop() + 1, // This variable finds the distance you have scrolled from the top.
-            SectionOneOffset = $('#home').offset().top, // This variable finds the distance between #section-one and the top. Replace #section-one with the ID of your section.
+            SectionOneOffset = $('#pageDiv').offset().top, // This variable finds the distance between #section-one and the top. Replace #section-one with the ID of your section.
             SectionTwoOffset = $('#portfolioSection').offset().top; // This variable finds the distance between #section-two and the top. Replace #section-two with the ID of your section. You can duplicate this for as many sections as you want.
             console.log(SectionOneOffset)
 // // #mktgDesign #art #contact
