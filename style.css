@@ -195,6 +195,19 @@ i {
 .lightText {
   font-weight: lighter;
 }
+
+.gridSection {
+  display: inline-grid;
+  grid-column-gap: 15px;  
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.gridItem{
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 150px;
+}
 /*aside {
 	display: flex;
 	flex-direction: column;
