@@ -92,16 +92,23 @@ MVP
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
-
+most proud of overall API! I had a lot of trouble with the for loops at first, so I am proud to be able to utilize them with ease now. Also, the string it returns to create each card was fun to work on and design/arrange. 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+/* API */
+let id = '16XjkVywfKrr5xFVnmsXPG6RyjTjue2VBurZf7dwCDUc'
+
+let source = `https://spreadsheets.google.com/feeds/list/16XjkVywfKrr5xFVnmsXPG6RyjTjue2VBurZf7dwCDUc/od6/public/values?alt=json`
+
+...
+  for (let i = 0; i < projects.length; i++) {
+              let $card = 
+              `<div class="card"> ...
 ```
 
 ## Issues and Resolutions
-
+I kept getting errors that the top was undefined as I tried to implement something that would highlight the active link. Ultimately, I scrapped this as it was post-MVP anyways. I ended up keeping it really simple and building slow, using console log a lot to check my work along the way and avoid too many errors. 
+Next time, I'll track my errors along the way more carefully. I can also write more pseudocode out.
 
 #### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+**ERROR**: app.js: top undefined                                
+**RESOLUTION**: eliminated feature
