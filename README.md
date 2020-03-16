@@ -36,6 +36,10 @@ my [google sheet](https://docs.google.com/spreadsheets/d/16XjkVywfKrr5xFVnmsXPG6
 
 [wireframe 3](https://res.cloudinary.com/mzprizm/image/upload/v1583708579/Screen_Shot_2020-03-08_at_4.01.42_PM_nb22r9.png)
 
+[wireframe 2.1](https://res.cloudinary.com/mzprizm/image/upload/v1584362539/Screen_Shot_2020-03-16_at_5.41.03_AM_of8mxn.png)
+
+[wireframe 2.2](https://res.cloudinary.com/mzprizm/image/upload/v1584362539/Screen_Shot_2020-03-16_at_5.41.07_AM_ltju4k.png)
+
 
 ## Time/Priority Matrix 
 
@@ -67,6 +71,7 @@ MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Adding Form | H | 1hrs| 1hrs | 1hrs |
+| Adding Grid | H | 1hrs| 1hrs | 1hrs |
 | buttons| H | 1hrs| 1hrs | 1hrs |
 | Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
 | Homepage | H | 3hrs| 3hrs | 3hrs |
@@ -77,7 +82,7 @@ MVP
 | planning/research | H | 2hrs| 5hrs | 5hrs |
 | images | H | .5hrs| .5hrs | 1hrs |
 | social meda | H | .5hrs| .5hrs | 1hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Total | H | 25hrs| 5hrs | 30hrs |
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project. 
@@ -95,7 +100,7 @@ function reverse(string) {
 ```
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
+
 
 #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
